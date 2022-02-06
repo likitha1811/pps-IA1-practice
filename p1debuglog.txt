@@ -1,0 +1,52 @@
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x7fc: file p1final.c, line 16.
+(gdb) r
+Starting program: /home/runner/pps-IA1-practice/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1final.c:16
+16  {
+(gdb) n
+17    int a,b, s=0;
+(gdb) s
+18    input(&a,&b);
+(gdb) s
+input (a=0x7ffce34d32dc, b=0x7ffce34d32e0) at p1final.c:4
+4     printf("enter two numbers:\n");
+(gdb) n
+enter two numbers:
+5     scanf("%d%d",a,b);
+(gdb) n
+1
+2
+6   }
+(gdb) n
+main () at p1final.c:19
+19    add(a,b,&s);
+(gdb) s
+add (a=1, b=2, s=0x7ffce34d32e4) at p1final.c:9
+9     *s=a+b;
+(gdb) n
+10  }
+(gdb) n
+main () at p1final.c:20
+20    output(a,b,s);
+(gdb) s
+output (a=1, b=2, s=3) at p1final.c:13
+13    printf("sum of %d + %d =%d\n",a,b,s);
+(gdb) n
+sum of 1 + 2 =3
+14  }
+(gdb) n
+main () at p1final.c:21
+21    return 0;
+(gdb) n
+22  }(gdb) q
+A debugging session is active.
+
+    Inferior 1 [process 110] will be killed.
+
+Quit anyway? (y or n) Quit
+(gdb) Quit
+(gdb) 
