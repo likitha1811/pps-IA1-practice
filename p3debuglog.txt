@@ -1,0 +1,95 @@
+
+Breakpoint 1, main () at p3final.c:31
+31    num=input_n();
+(gdb) s
+input_n () at p3final.c:3
+3   {
+(gdb) n
+5     printf("enter the number - n :\n");
+(gdb) n
+enter the number - n :
+6     scanf("%d",&n);
+(gdb) n
+5
+7     return n;
+(gdb) n
+8   }
+(gdb) n
+main () at p3final.c:32
+32    result=sum_n(num);
+(gdb) s
+sum_n (n=5) at p3final.c:12
+12    sum=0;
+(gdb) n
+13    for(i=1;i<=n;i++)
+(gdb) n
+15      sum=sum+i;
+(gdb) n
+13    for(i=1;i<=n;i++)
+(gdb) p sum
+$1 = 1
+(gdb) n
+15      sum=sum+i;
+(gdb) n
+13    for(i=1;i<=n;i++)
+(gdb) p sum
+$2 = 3
+(gdb) n
+15      sum=sum+i;
+(gdb) n
+13    for(i=1;i<=n;i++)
+(gdb) p sum
+$3 = 6
+(gdb) n
+15      sum=sum+i;
+(gdb) n
+13    for(i=1;i<=n;i++)
+(gdb) p sum
+$4 = 10
+(gdb) n
+15      sum=sum+i;
+(gdb) n
+13    for(i=1;i<=n;i++)
+(gdb) p sum
+$5 = 15
+(gdb) n
+17    return sum;
+(gdb) n
+18  }
+(gdb) n
+main () at p3final.c:33
+33    output(num,result);
+(gdb) s
+output (n=5, sum=15) at p3final.c:22
+22    for(i=1;i<n;i++)
+(gdb) n
+24      printf("%d + ",i);
+(gdb) n
+22    for(i=1;i<n;i++)
+(gdb) n
+24      printf("%d + ",i);
+(gdb) n
+22    for(i=1;i<n;i++)
+(gdb) n
+24      printf("%d + ",i);
+(gdb) n
+22    for(i=1;i<n;i++)
+(gdb) n
+24      printf("%d + ",i);
+(gdb) n
+22    for(i=1;i<n;i++)
+(gdb) n
+26    printf("%d = %d \n",n,sum);
+(gdb) n
+1 + 2 + 3 + 4 + 5 = 15 
+27  }
+(gdb) n
+main () at p3final.c:34
+34    return 0;
+(gdb) n
+35  }(gdb) q
+A debugging session is active.
+
+    Inferior 1 [process 327] will be killed.
+
+Quit anyway? (y or n) y
